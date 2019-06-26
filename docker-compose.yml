@@ -39,6 +39,7 @@ services:
   #MySQL Service
   db:
     image: mysql:5.7.22
+    command: --innodb-use-native-aio=0
     container_name: db
     restart: unless-stopped
     tty: true
